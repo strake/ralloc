@@ -54,6 +54,7 @@ pub use fail::set_oom_handler;
 pub use fail::set_thread_oom_handler;
 
 /// The rallocator
+#[derive(Debug, Clone, Copy, Default)]
 pub struct Allocator;
 
 unsafe impl<'a> Alloc for &'a Allocator {
